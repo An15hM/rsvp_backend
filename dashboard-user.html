@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Links Of CSS File -->
+    <link rel="stylesheet" href="assets/css/sidebar-menu.css">
+    <link rel="stylesheet" href="assets/css/simplebar.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/rangeslider.css">
+    <link rel="stylesheet" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" href="assets/css/google-icon.css">
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/fullcalendar.main.css">
+    <link rel="stylesheet" href="assets/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="assets/css/lightpick.css">
+    <link rel="stylesheet" href="assets/css/datepicker.material.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- Title -->
+    <title>Booking System</title>
+</head>
+
+<body class="boxed-size">
+
+
+    <!-- Start Sidebar Area -->
+    <div class="sidebar-area" id="sidebar-area">
+        <div class="logo position-relative">
+            <a href="index.html" class="d-block text-decoration-none position-relative">
+                <img src="assets/images/logo-icon.png" alt="logo-icon">
+                <span class="logo-text fw-bold text-dark">Booking</span>
+            </a>
+            <button
+                class="sidebar-burger-menu bg-transparent p-0 border-0 opacity-0 z-n1 position-absolute top-50 end-0 translate-middle-y"
+                id="sidebar-burger-menu">
+                <i data-feather="x"></i>
+            </button>
+        </div>
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu active" data-simplebar>
+            <ul class="menu-inner">
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link active">
+                        <span class="material-symbols-outlined menu-icon">dashboard</span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle active">
+                        <span class="material-symbols-outlined menu-icon">
+                            calendar_clock
+                        </span>
+                        <span class="title">Events</span>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Create New Event
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                View Events
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <span class="material-symbols-outlined menu-icon">
+                            group
+                        </span>
+                        <span class="title">Users</span>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Create New User
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                View Users
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <span class="material-symbols-outlined ">
+                            table_restaurant
+                        </span>
+                        <span class="title">Tables Management</span>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Create New Table
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                View Tables
+                            </a>
+                        </li>
+                    </ul>
+                </li> -->
+
+                <!-- <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link">
+
+                        <span class="material-symbols-outlined menu-icon">
+                            analytics
+                        </span>
+                        <span class="title">Reports and Analytics</span>
+                    </a>
+                </li> -->
+            </ul>
+        </aside>
+    </div>
+    <!-- End Sidebar Area -->
+
+    <!-- Start Main Content Area -->
+    <div class="container-fluid">
+        <div class="main-content d-flex flex-column">
+            <!-- Start Header Area -->
+            <header class="header-area bg-white mb-4 rounded-bottom-15" id="header-area">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="left-header-content">
+                            <ul
+                                class="d-flex align-items-center ps-0 mb-0 list-unstyled justify-content-center justify-content-sm-start">
+                                <li>
+                                    <button class="header-burger-menu bg-transparent p-0 border-0"
+                                        id="header-burger-menu">
+                                        <span class="material-symbols-outlined">menu</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <form class="src-form position-relative">
+                                        <input type="text" class="form-control" placeholder="Search here.....">
+                                        <button type="submit"
+                                            class="src-btn position-absolute top-50 end-0 translate-middle-y bg-transparent p-0 border-0">
+                                            <span class="material-symbols-outlined">search</span>
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-sm-6">
+                        <div class="right-header-content mt-2 mt-sm-0">
+                            <ul
+                                class="d-flex align-items-center justify-content-center justify-content-sm-end ps-0 mb-0 list-unstyled">
+                                <li class="header-right-item">
+                                    <div class="light-dark">
+                                        <button class="switch-toggle settings-btn dark-btn p-0 bg-transparent border-0"
+                                            id="switch-toggle">
+                                            <span class="dark"><i
+                                                    class="material-symbols-outlined">light_mode</i></span>
+                                            <span class="light"><i
+                                                    class="material-symbols-outlined">dark_mode</i></span>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="header-right-item">
+                                    <button class="fullscreen-btn bg-transparent p-0 border-0" id="fullscreen-button">
+                                        <i class="material-symbols-outlined text-body">fullscreen</i>
+                                    </button>
+                                </li>
+                                <li class="header-right-item">
+                                    <div class="dropdown notifications noti">
+                                        <button class="btn btn-secondary border-0 p-0 position-relative badge"
+                                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="material-symbols-outlined">notifications</span>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-lg p-0 border-0 p-0 dropdown-menu-end">
+                                            <div class="d-flex justify-content-between align-items-center title">
+                                                <span class="fw-semibold fs-15 text-secondary">Notifications <span
+                                                        class="fw-normal text-body fs-14">(03)</span></span>
+                                                <button class="p-0 m-0 bg-transparent border-0 fs-14 text-primary">Clear
+                                                    All</button>
+                                            </div>
+
+                                            <div class="max-h-217" data-simplebar>
+                                                <div class="notification-menu">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-primary">sms</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>You have requested to <span
+                                                                        class="fw-semibold">withdrawal</span></p>
+                                                                <span class="fs-13">2 hrs ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu unseen">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-info">person</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>A new user added in BookingSystem</p>
+                                                                <span class="fs-13">3 hrs ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-success">mark_email_unread</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>You have requested to <span
+                                                                        class="fw-semibold">withdrawal</span></p>
+                                                                <span class="fs-13">1 day ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-primary">sms</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>You have requested to <span
+                                                                        class="fw-semibold">withdrawal</span></p>
+                                                                <span class="fs-13">2 hrs ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu unseen">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-info">person</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>A new user added in BookingSystem</p>
+                                                                <span class="fs-13">3 hrs ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-success">mark_email_unread</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>You have requested to <span
+                                                                        class="fw-semibold">withdrawal</span></p>
+                                                                <span class="fs-13">1 day ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <a href="notification.html"
+                                                class="dropdown-item text-center text-primary d-block view-all fw-medium rounded-bottom-3">
+                                                <span>See All Notifications </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header-right-item">
+                                    <div class="dropdown admin-profile">
+                                        <div class="d-xxl-flex align-items-center bg-transparent border-0 text-start p-0 cursor dropdown-toggle"
+                                            data-bs-toggle="dropdown">
+                                            <div class="flex-shrink-0">
+                                                <img class="rounded-circle wh-40 administrator"
+                                                    src="assets/images/administrator.jpg" alt="admin">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="d-none d-xxl-block">
+                                                        <div class="d-flex align-content-center">
+                                                            <h3>Olivia</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-menu border-0 bg-white dropdown-menu-end">
+                                            <div class="d-flex align-items-center info">
+                                                <div class="flex-shrink-0">
+                                                    <img class="rounded-circle wh-30 administrator"
+                                                        src="assets/images/administrator.jpg" alt="admin">
+                                                </div>
+                                                <div class="flex-grow-1 ms-2">
+                                                    <h3 class="fw-medium">Olivia John</h3>
+                                                    <span class="fs-12">Marketing Manager</span>
+                                                </div>
+                                            </div>
+                                            <ul class="admin-link ps-0 mb-0 list-unstyled">
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="my-profile.html">
+                                                        <i class="material-symbols-outlined">account_circle</i>
+                                                        <span class="ms-2">My Profile</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="chat.html">
+                                                        <i class="material-symbols-outlined">chat</i>
+                                                        <span class="ms-2">Messages</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="checkout.html">
+                                                        <i class="material-symbols-outlined">credit_card </i>
+                                                        <span class="ms-2">Billing</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="admin-link ps-0 mb-0 list-unstyled">
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="settings.html">
+                                                        <i class="material-symbols-outlined">settings </i>
+                                                        <span class="ms-2">Settings</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="login.html">
+                                                        <i class="material-symbols-outlined">logout</i>
+                                                        <span class="ms-2">Logout</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End Header Area -->
+
+            <div class="main-content-container overflow-hidden">
+
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+                    <h3 class="mb-0">Dashboard</h3>
+                </div>
+
+                <div class="card bg-primary border-0 rounded-3 welcome-box mb-4">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="border-bottom position-relative top-5">
+                                    <p class="text-light mb-1">Upcoming Event</p>
+                                    <h3 class="text-white fw-semibold mb-1">25th Annual Office AGM</h3>
+
+                                </div>
+
+                                <div class="d-flex align-items-center flex-wrap gap-4 gap-xxl-5">
+                                    <div class="d-flex align-items-center welcome-status-item">
+                                        <div class="flex-shrink-0">
+                                            <i class="material-symbols-outlined">
+                                                calendar_month
+                                            </i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <p class="text-white mb-1 mt-0">Happening On</p>
+                                            <h5 class="text-white fw-semibold mb-0">25th February, 2026</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center welcome-status-item">
+                                        <div class="flex-shrink-0">
+                                            <i class="material-symbols-outlined icon-bg">map</i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <p class="text-white mb-1 mt-0">Happening At:</p>
+                                            <h5 class="text-white fw-semibold mb-0">Office Building, 223 Park Avenue
+                                            </h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center welcome-status-item">
+                                        <div class="flex-shrink-0">
+                                            <i class="material-symbols-outlined">
+                                                groups
+                                            </i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <p class="text-white mb-1 mt-0">Successful RSVP</p>
+                                            <h5 class="text-white fw-semibold mb-0">125</h5>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="welcome-img text-center text-sm-end mt-4 mt-sm-0">
+                                    <img src="assets/images/welcome.png" alt="welcome">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 col-xl-4">
+                        <div class="card custom-shadow for-dark-rounded-bg rounded-3 border mb-4">
+
+                            <div class="card-body bg-white p-4 rounded-2">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-2"
+                                    style="padding: 4.5px 0;">
+                                    <h3 class="mb-0 fs-16 fw-normal">Total Events</h3>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="fs-24 fw-semibold text-secondary mb-0">200</h3>
+                                    <div class="text-center rounded-circle d-flex align-items-center justify-content-center text-primary"
+                                        style="background-color: #ECF0FF; width: 51px; height: 51px; line-height: 51px;">
+                                        <span class="material-symbols-outlined">
+                                            calendar_month
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                        <div class="card custom-shadow for-dark-rounded-bg rounded-3 border mb-4">
+
+                            <div class="card-body bg-white p-4 rounded-2">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-2"
+                                    style="padding: 4.5px 0;">
+                                    <h3 class="mb-0 fs-16 fw-normal">Events Today</h3>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="fs-24 fw-semibold text-secondary mb-0">15</h3>
+                                    <div class="text-center rounded-circle d-flex align-items-center justify-content-center text-primary"
+                                        style="background-color: #ECF0FF; width: 51px; height: 51px; line-height: 51px;">
+                                        <span class="material-symbols-outlined">
+                                            calendar_today
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                        <div class="card custom-shadow for-dark-rounded-bg rounded-3 border mb-4">
+
+                            <div class="card-body bg-white p-4 rounded-2">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-2"
+                                    style="padding: 4.5px 0;">
+                                    <h3 class="mb-0 fs-16 fw-normal">Total Users</h3>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="fs-24 fw-semibold text-secondary mb-0">45</h3>
+                                    <div class="text-center rounded-circle d-flex align-items-center justify-content-center text-primary"
+                                        style="background-color: #ECF0FF; width: 51px; height: 51px; line-height: 51px;">
+                                        <span class="material-symbols-outlined">
+                                            groups
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                        <div class="card custom-shadow for-dark-rounded-bg rounded-3 border mb-4">
+
+                            <div class="card-body bg-white p-4 rounded-2">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-2"
+                                    style="padding: 4.5px 0;">
+                                    <h3 class="mb-0 fs-16 fw-normal">New Users Today</h3>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="fs-24 fw-semibold text-secondary mb-0">2</h3>
+                                    <div class="text-center rounded-circle d-flex align-items-center justify-content-center text-primary"
+                                        style="background-color: #ECF0FF; width: 51px; height: 51px; line-height: 51px;">
+                                        <span class="material-symbols-outlined">
+                                            diversity_1
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                        <div class="card custom-shadow for-dark-rounded-bg rounded-3 border mb-4">
+
+                            <div class="card-body bg-white p-4 rounded-2">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-2"
+                                    style="padding: 4.5px 0;">
+                                    <h3 class="mb-0 fs-16 fw-normal">Total Invite Page Visits</h3>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="fs-24 fw-semibold text-secondary mb-0">45</h3>
+                                    <div class="text-center rounded-circle d-flex align-items-center justify-content-center text-primary"
+                                        style="background-color: #ECF0FF; width: 51px; height: 51px; line-height: 51px;">
+                                        <span class="material-symbols-outlined">
+                                            groups
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-4">
+                        <div class="card custom-shadow for-dark-rounded-bg rounded-3 border mb-4">
+
+                            <div class="card-body bg-white p-4 rounded-2">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-2"
+                                    style="padding: 4.5px 0;">
+                                    <h3 class="mb-0 fs-16 fw-normal">Response Rate</h3>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h3 class="fs-24 fw-semibold text-secondary mb-0">2.45</h3>
+                                    <div class="text-center rounded-circle d-flex align-items-center justify-content-center text-primary"
+                                        style="background-color: #ECF0FF; width: 51px; height: 51px; line-height: 51px;">
+                                        <span class="material-symbols-outlined">
+                                            diversity_1
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Daily Bookings (Last 7 Days)</h5>
+                                <canvas id="dailyBookingsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Top 5 Restaurants by Booking</h5>
+                                <canvas id="topRestaurantsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="flex-grow-1"></div>
+
+            <!-- Start Footer Area -->
+            <footer class="footer-area bg-white text-center rounded-top-7">
+                <p class="fs-14">© All Rights Reserved.</p>
+            </footer>
+            <!-- End Footer Area -->
+        </div>
+    </div>
+    <!-- Start Main Content Area -->
+
+
+
+    <!-- Link Of JS File -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/sidebar-menu.js"></script>
+    <script src="assets/js/dragdrop.js"></script>
+    <script src="assets/js/rangeslider.min.js"></script>
+    <script src="assets/js/quill.min.js"></script>
+    <script src="assets/js/data-table.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/feather.min.js"></script>
+    <script src="assets/js/simplebar.min.js"></script>
+    <script src="assets/js/apexcharts.min.js"></script>
+    <script src="assets/js/echarts.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/fullcalendar.main.js"></script>
+    <script src="assets/js/jsvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/lightpick.js"></script>
+    <script src="assets/js/custom/apexcharts.js"></script>
+    <script src="assets/js/custom/echarts.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/custom/custom.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const dailyBookingsCtx = document.getElementById('dailyBookingsChart').getContext('2d');
+        new Chart(dailyBookingsCtx, {
+            type: 'bar',
+            data: { "labels": ["Dec 23", "Dec 24", "Dec 25", "Dec 26", "Dec 27", "Dec 28", "Dec 29"], "datasets": [{ "label": "Bookings", "backgroundColor": "#0d6efd", "data": [3, 2, 2, 7, 4, 2, 2] }] },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+
+
+        const topRestaurantsCtx = document.getElementById('topRestaurantsChart').getContext('2d');
+        new Chart(topRestaurantsCtx, {
+            type: 'bar',
+            data: { "labels": ["Johnston-Bartell", "Atlantis On The Bay", "Marko Restaurant", "Anita's Delight", "Test"], "datasets": [{ "label": "Bookings", "backgroundColor": "#6610f2", "data": [68, 62, 38, 11, 1] }] },
+            options: {
+                responsive: true,
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
