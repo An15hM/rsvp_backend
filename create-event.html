@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Links Of CSS File -->
+    <link rel="stylesheet" href="assets/css/sidebar-menu.css">
+    <link rel="stylesheet" href="assets/css/simplebar.css">
+    <link rel="stylesheet" href="assets/css/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/rangeslider.css">
+    <link rel="stylesheet" href="assets/css/quill.snow.css">
+    <link rel="stylesheet" href="assets/css/google-icon.css">
+    <link rel="stylesheet" href="assets/css/remixicon.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/fullcalendar.main.css">
+    <link rel="stylesheet" href="assets/css/jsvectormap.min.css">
+    <link rel="stylesheet" href="assets/css/lightpick.css">
+    <link rel="stylesheet" href="assets/css/datepicker.material.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- Title -->
+    <title>RSVP Events</title>
+</head>
+
+<body class="boxed-size">
+
+
+    <!-- Start Sidebar Area -->
+    <div class="sidebar-area" id="sidebar-area">
+        <div class="logo position-relative">
+            <a href="index.html" class="d-block text-decoration-none position-relative">
+                <img src="assets/images/logo-icon.png" alt="logo-icon">
+                <span class="logo-text fw-bold text-dark">Booking</span>
+            </a>
+            <button
+                class="sidebar-burger-menu bg-transparent p-0 border-0 opacity-0 z-n1 position-absolute top-50 end-0 translate-middle-y"
+                id="sidebar-burger-menu">
+                <i data-feather="x"></i>
+            </button>
+        </div>
+
+        <aside id="layout-menu" class="layout-menu menu-vertical menu active" data-simplebar>
+            <ul class="menu-inner">
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link active">
+                        <span class="material-symbols-outlined menu-icon">dashboard</span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle active">
+                        <span class="material-symbols-outlined menu-icon">
+                            calendar_clock
+                        </span>
+                        <span class="title">Events</span>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Create New Event
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                View Events
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <span class="material-symbols-outlined menu-icon">
+                            group
+                        </span>
+                        <span class="title">Users</span>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Create New User
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                View Organizers
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                View Managers
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+                <!-- <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <span class="material-symbols-outlined ">
+                            table_restaurant
+                        </span>
+                        <span class="title">Tables Management</span>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                Create New Table
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                View Tables
+                            </a>
+                        </li>
+                    </ul>
+                </li> -->
+
+                <!-- <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link">
+
+                        <span class="material-symbols-outlined menu-icon">
+                            analytics
+                        </span>
+                        <span class="title">Reports and Analytics</span>
+                    </a>
+                </li> -->
+            </ul>
+        </aside>
+    </div>
+    <!-- End Sidebar Area -->
+
+    <!-- Start Main Content Area -->
+    <div class="container-fluid">
+        <div class="main-content d-flex flex-column">
+            <!-- Start Header Area -->
+            <header class="header-area bg-white mb-4 rounded-bottom-15" id="header-area">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="left-header-content">
+                            <ul
+                                class="d-flex align-items-center ps-0 mb-0 list-unstyled justify-content-center justify-content-sm-start">
+                                <li>
+                                    <button class="header-burger-menu bg-transparent p-0 border-0"
+                                        id="header-burger-menu">
+                                        <span class="material-symbols-outlined">menu</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <form class="src-form position-relative">
+                                        <input type="text" class="form-control" placeholder="Search here.....">
+                                        <button type="submit"
+                                            class="src-btn position-absolute top-50 end-0 translate-middle-y bg-transparent p-0 border-0">
+                                            <span class="material-symbols-outlined">search</span>
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-sm-6">
+                        <div class="right-header-content mt-2 mt-sm-0">
+                            <ul
+                                class="d-flex align-items-center justify-content-center justify-content-sm-end ps-0 mb-0 list-unstyled">
+                                <li class="header-right-item">
+                                    <div class="light-dark">
+                                        <button class="switch-toggle settings-btn dark-btn p-0 bg-transparent border-0"
+                                            id="switch-toggle">
+                                            <span class="dark"><i
+                                                    class="material-symbols-outlined">light_mode</i></span>
+                                            <span class="light"><i
+                                                    class="material-symbols-outlined">dark_mode</i></span>
+                                        </button>
+                                    </div>
+                                </li>
+                                <li class="header-right-item">
+                                    <button class="fullscreen-btn bg-transparent p-0 border-0" id="fullscreen-button">
+                                        <i class="material-symbols-outlined text-body">fullscreen</i>
+                                    </button>
+                                </li>
+                                <li class="header-right-item">
+                                    <div class="dropdown notifications noti">
+                                        <button class="btn btn-secondary border-0 p-0 position-relative badge"
+                                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="material-symbols-outlined">notifications</span>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-lg p-0 border-0 p-0 dropdown-menu-end">
+                                            <div class="d-flex justify-content-between align-items-center title">
+                                                <span class="fw-semibold fs-15 text-secondary">Notifications <span
+                                                        class="fw-normal text-body fs-14">(03)</span></span>
+                                                <button class="p-0 m-0 bg-transparent border-0 fs-14 text-primary">Clear
+                                                    All</button>
+                                            </div>
+
+                                            <div class="max-h-217" data-simplebar>
+                                                <div class="notification-menu">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-primary">sms</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>You have requested to <span
+                                                                        class="fw-semibold">withdrawal</span></p>
+                                                                <span class="fs-13">2 hrs ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu unseen">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-info">person</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>A new user added in BookingSystem</p>
+                                                                <span class="fs-13">3 hrs ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-success">mark_email_unread</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>You have requested to <span
+                                                                        class="fw-semibold">withdrawal</span></p>
+                                                                <span class="fs-13">1 day ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-primary">sms</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>You have requested to <span
+                                                                        class="fw-semibold">withdrawal</span></p>
+                                                                <span class="fs-13">2 hrs ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu unseen">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-info">person</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>A new user added in BookingSystem</p>
+                                                                <span class="fs-13">3 hrs ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="notification-menu">
+                                                    <a href="notification.html" class="dropdown-item">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <i
+                                                                    class="material-symbols-outlined text-success">mark_email_unread</i>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-3">
+                                                                <p>You have requested to <span
+                                                                        class="fw-semibold">withdrawal</span></p>
+                                                                <span class="fs-13">1 day ago</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <a href="notification.html"
+                                                class="dropdown-item text-center text-primary d-block view-all fw-medium rounded-bottom-3">
+                                                <span>See All Notifications </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header-right-item">
+                                    <div class="dropdown admin-profile">
+                                        <div class="d-xxl-flex align-items-center bg-transparent border-0 text-start p-0 cursor dropdown-toggle"
+                                            data-bs-toggle="dropdown">
+                                            <div class="flex-shrink-0">
+                                                <img class="rounded-circle wh-40 administrator"
+                                                    src="assets/images/administrator.jpg" alt="admin">
+                                            </div>
+                                            <div class="flex-grow-1 ms-2">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <div class="d-none d-xxl-block">
+                                                        <div class="d-flex align-content-center">
+                                                            <h3>Olivia</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-menu border-0 bg-white dropdown-menu-end">
+                                            <div class="d-flex align-items-center info">
+                                                <div class="flex-shrink-0">
+                                                    <img class="rounded-circle wh-30 administrator"
+                                                        src="assets/images/administrator.jpg" alt="admin">
+                                                </div>
+                                                <div class="flex-grow-1 ms-2">
+                                                    <h3 class="fw-medium">Olivia John</h3>
+                                                    <span class="fs-12">Marketing Manager</span>
+                                                </div>
+                                            </div>
+                                            <ul class="admin-link ps-0 mb-0 list-unstyled">
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="my-profile.html">
+                                                        <i class="material-symbols-outlined">account_circle</i>
+                                                        <span class="ms-2">My Profile</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="chat.html">
+                                                        <i class="material-symbols-outlined">chat</i>
+                                                        <span class="ms-2">Messages</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="checkout.html">
+                                                        <i class="material-symbols-outlined">credit_card </i>
+                                                        <span class="ms-2">Billing</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="admin-link ps-0 mb-0 list-unstyled">
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="settings.html">
+                                                        <i class="material-symbols-outlined">settings </i>
+                                                        <span class="ms-2">Settings</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="dropdown-item admin-item-link d-flex align-items-center text-body"
+                                                        href="login.html">
+                                                        <i class="material-symbols-outlined">logout</i>
+                                                        <span class="ms-2">Logout</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- End Header Area -->
+
+            <div class="main-content-container overflow-hidden">
+
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+                    <h3 class="mb-0">Create Event</h3>
+                </div>
+
+                <div class="card bg-white border-0 rounded-3 mb-4">
+                    <div class="card-body p-4">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-8">
+                                <ul class="nav nav-tabs justify-content-between border-0 mb-0 wizard-tabs"
+                                    id="myTabstep" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link wh-48 bg-primary bg-opacity-10 rounded-circle p-0"
+                                            id="step1-tab">
+                                            <span class="fs-20 fw-bold text-primary">1</span>
+
+                                        </button>
+                                        <p>Basic Information</p>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link wh-48 bg-primary bg-opacity-10 rounded-circle p-0"
+                                            id="step2-tab">
+                                            <span class="fs-20 fw-bold text-primary">2</span>
+                                        </button>
+                                        <p>Location and Tickets</p>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link wh-48 bg-primary bg-opacity-10 rounded-circle p-0"
+                                            id="step3-tab">
+                                            <span class="fs-20 fw-bold text-primary">3</span>
+                                        </button>
+                                        <p>Calendar and RSVP</p>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link wh-48 bg-primary bg-opacity-10 rounded-circle p-0"
+                                            id="step4-tab">
+                                            <span class="fs-20 fw-bold text-primary">4</span>
+                                        </button>
+                                        <p>Additional Info</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="myTabstepContent">
+
+                    <div class="tab-pane fade show active" id="step1-tab-pane" role="tabpanel"
+                        aria-labelledby="step1-tab" tabindex="0">
+                        <div class="card bg-white border-0 rounded-3 mb-4">
+                            <div class="card-body p-4">
+                                <h4 class="fs-18 fw-semibold">General Information</h4>
+                                <p class="text-gray-light mb-4">Fill all Information as below</p>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Event Name</label>
+                                            <div class="form-group position-relative">
+                                                <input type="text" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Name">
+                                                <i
+                                                    class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Event Banner</label>
+                                            <div class="form-control h-100 text-center position-relative p-4 p-lg-5">
+                                                <div class="product-upload">
+                                                    <label for="file-upload" class="file-upload mb-0">
+                                                        <i
+                                                            class="ri-folder-image-line bg-primary bg-opacity-10 p-2 rounded-1 text-primary"></i>
+                                                        <span class="d-block text-body fs-14">Drag and drop an image
+                                                            or <span
+                                                                class="text-primary text-decoration-underline">Browse</span></span>
+                                                    </label>
+                                                    <input id="file-upload" type="file">
+                                                </div>
+                                            </div>
+                                            <label class="label">Recommended size: 1920 x x 500</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Start Date</label>
+                                            <div class="form-group position-relative">
+                                                <input type="date" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Email Address">
+                                                <i
+                                                    class="ri-calendar-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Start Time</label>
+                                            <div class="form-group position-relative">
+                                                <input type="time" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Phone Number">
+                                                <i
+                                                    class="ri-clock-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-4">
+                                            <label class="label">End Date</label>
+                                            <div class="form-group position-relative">
+                                                <input type="date" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Email Address">
+                                                <i
+                                                    class="ri-mail-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-4">
+                                            <label class="label">End Time</label>
+                                            <div class="form-group position-relative">
+                                                <input type="time" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Phone Number">
+                                                <i
+                                                    class="ri-phone-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group d-flex gap-3">
+                                            <button
+                                                class="btn btn-primary bg-primary bg-opacity-10 text-primary py-3 px-5 fw-semibold border-0 btn-back">Back</button>
+                                            <button
+                                                class="btn btn-primary py-3 px-5 fw-semibold text-white btn-next">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="step2-tab-pane" role="tabpanel" aria-labelledby="step2-tab"
+                        tabindex="0">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card bg-white border-0 rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <h4 class="fs-18 fw-semibold">Event Description</h4>
+                                        <hr>
+                                        <div class="form-group mb-4">
+                                            <div id="standalone-container">
+                                                <div id="toolbar-container" class="rounded-top-2">
+                                                    <span class="ql-formats">
+                                                        <select class="ql-font"></select>
+                                                        <select class="ql-size"></select>
+                                                    </span>
+                                                    <span class="ql-formats">
+                                                        <button class="ql-bold"></button>
+                                                        <button class="ql-italic"></button>
+                                                        <button class="ql-underline"></button>
+                                                        <button class="ql-strike"></button>
+                                                    </span>
+                                                    <span class="ql-formats">
+                                                        <button class="ql-blockquote"></button>
+                                                        <button class="ql-code-block"></button>
+                                                    </span>
+                                                    <span class="ql-formats">
+                                                        <button class="ql-list" value="ordered"></button>
+                                                        <button class="ql-list" value="bullet"></button>
+                                                        <button class="ql-indent" value="-1"></button>
+                                                        <button class="ql-indent" value="+1"></button>
+                                                    </span>
+                                                    <span class="ql-formats">
+                                                        <button class="ql-link"></button>
+                                                        <button class="ql-image"></button>
+                                                        <button class="ql-video"></button>
+                                                    </span>
+                                                </div>
+                                                <div id="editor-container" style="height: 250px; border-color: #D5D9E2;"
+                                                    class="rounded-bottom-2"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-4">
+                                                    <label class="label text-secondary">Expected Attendees</label>
+                                                    <div class="form-group position-relative">
+                                                        <select class="form-select form-control h-60"
+                                                            aria-label="Default select example">
+                                                            <option selected class="text-dark">Less than 50</option>
+                                                            <option value="1" class="text-dark">50 - 100</option>
+                                                            <option value="2" class="text-dark">100 - 200</option>
+                                                            <option value="3" class="text-dark">200 +</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-4">
+                                                    <label class="label">Event Type</label>
+                                                    <div class="d-flex align-items-center mb-2" style="gap:10px;">
+                                                        <input type="radio" name="event-type" name="private-event"
+                                                            id="private-event">
+                                                        <label for="private-event">Private
+                                                            Event</label>
+                                                    </div>
+                                                    <div class="d-flex align-items-center" style="gap:10px;">
+                                                        <input type="radio" name="event-type" name="public-event"
+                                                            id="public-event">
+                                                        <label for="public-event">Public
+                                                            Event</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card bg-white border-0 rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <h4 class="fs-18 fw-semibold">Location and Type</h4>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-4">
+                                                    <label class="label">Event location</label>
+                                                    <div class="form-group position-relative">
+                                                        <input type="text" class="form-control text-dark ps-5 h-55"
+                                                            placeholder="Enter Name">
+                                                        <i
+                                                            class="ri-map-pin-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="map-wrap">
+                                                    <iframe
+                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14127.246730162711!2d85.34952165035286!3d27.723100118772802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b0c4bf34e89%3A0x9e398a10248b4a6d!2sBoudha%20Stupa%20(%20Boudhanath%20)!5e0!3m2!1sen!2snp!4v1769410404357!5m2!1sen!2snp"
+                                                        width="100%" height="350" style="border:0;" allowfullscreen=""
+                                                        loading="lazy"
+                                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card bg-white border-0 rounded-3 mb-4">
+                                <div class="card-body p-4">
+                                    <div class="col-lg-12">
+                                        <div class="form-group d-flex gap-3">
+                                            <button
+                                                class="btn btn-primary bg-primary bg-opacity-10 text-primary py-3 px-5 fw-semibold border-0 btn-back">Back</button>
+                                            <button
+                                                class="btn btn-primary py-3 px-5 fw-semibold text-white btn-next">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="step3-tab-pane" role="tabpanel" aria-labelledby="step3-tab"
+                        tabindex="0">
+                        <div class="card bg-white border-0 rounded-3 mb-4">
+                            <div class="card-body p-4">
+                                <div class="row justify-content-between">
+                                    <div class="col-sm-8">
+                                        <h4 class="fs-18 fw-semibold">Add to Calendar</h4>
+                                        <p>Enable guests to save the event directly to their personal calendars</p>
+                                    </div>
+                                    <div class="col-sm-1 text-end">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card bg-white border-0 rounded-3 mb-4">
+                            <div class="card-body p-4">
+                                <h4 class="fs-18 fw-semibold">RSVP Form</h4>
+                                <hr>
+                                <div class="row align-items-end">
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Full name</label>
+                                            <div class="form-group position-relative">
+                                                <input type="text" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Name">
+                                                <i
+                                                    class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Phone number</label>
+                                            <div class="form-group position-relative">
+                                                <input type="text" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Name">
+                                                <i
+                                                    class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Email address</label>
+                                            <div class="form-group position-relative">
+                                                <input type="text" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Name">
+                                                <i
+                                                    class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-4">
+                                            <label class="label">No. of guests</label>
+                                            <div class="form-group position-relative">
+                                                <input type="text" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Name">
+                                                <i
+                                                    class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Attendees Names</label>
+                                            <div class="form-group position-relative">
+                                                <input type="text" class="form-control text-dark ps-5 h-55"
+                                                    placeholder="Enter Name">
+                                                <i
+                                                    class="ri-user-line position-absolute top-50 start-0 translate-middle-y fs-20 text-gray-light ps-20"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-4">
+                                        <button type="button"
+                                            class="btn btn-primary bg-primary bg-opacity-10 text-primary py-3 px-5"><i
+                                                class="ri-add-line"></i> Add custom fields</button>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Leave a message</label>
+                                            <div class="form-group mb-0">
+                                                <label class="label text-secondary">Order Notes :</label>
+                                                <div class="form-group position-relative">
+                                                    <textarea class="form-control ps-5 text-dark"
+                                                        placeholder="Some demo text ... " cols="30" rows="5"></textarea>
+                                                    <i
+                                                        class="ri-information-line position-absolute top-0 start-0 fs-20 ps-20 pt-2"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group d-flex gap-3">
+                                            <button
+                                                class="btn btn-primary bg-primary bg-opacity-10 text-primary py-3 px-5 fw-semibold border-0 btn-back">Back</button>
+                                            <button
+                                                class="btn btn-primary py-3 px-5 fw-semibold text-white btn-next">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="step4-tab-pane" role="tabpanel" aria-labelledby="step4-tab"
+                        tabindex="0">
+                        <div class="card bg-white border-0 rounded-3 mb-4">
+                            <div class="card-body p-4">
+                                <h4 class="fs-18 fw-semibold">Additional Info</h4>
+                                <hr>
+                                <div class="row">
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Gallery Photos (optional)</label>
+                                            <div class="form-control h-100 text-center position-relative p-4 p-lg-5">
+                                                <div class="product-upload">
+                                                    <label for="file-upload" class="file-upload mb-0">
+                                                        <i
+                                                            class="ri-folder-image-line bg-primary bg-opacity-10 p-2 rounded-1 text-primary"></i>
+                                                        <span class="d-block text-body fs-14">Drag and drop an image
+                                                            or <span
+                                                                class="text-primary text-decoration-underline">Browse</span></span>
+                                                    </label>
+                                                    <input id="file-upload" type="file">
+                                                </div>
+                                            </div>
+                                            <label class="label">Recommended size: 1200px x 1200px</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group mb-4">
+                                            <label class="label">Leave a wall message (optional)</label>
+                                            <div class="form-group mb-0">
+                                                <label class="label text-secondary">Order Notes :</label>
+                                                <div class="form-group position-relative">
+                                                    <textarea class="form-control ps-5 text-dark"
+                                                        placeholder="Some demo text ... " cols="30" rows="5"></textarea>
+                                                    <i
+                                                        class="ri-information-line position-absolute top-0 start-0 fs-20 ps-20 pt-2"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group mb-4">
+                                            <label class="label">FAQ</label>
+                                            <input type="text" class="form-control text-dark mb-2 ps-5 h-55"
+                                                placeholder="Questions">
+                                            <div class="form-group mb-0">
+
+                                                <div class="form-group position-relative">
+                                                    <textarea class="form-control ps-5 text-dark"
+                                                        placeholder="Some demo text ... " cols="30" rows="5"></textarea>
+                                                    <i
+                                                        class="ri-information-line position-absolute top-0 start-0 fs-20 ps-20 pt-2"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group d-flex gap-3">
+                                            <button
+                                                class="btn btn-primary bg-primary bg-opacity-10 text-primary py-3 px-5 fw-semibold border-0 btn-back">Back</button>
+                                            <button
+                                                class="btn btn-primary py-3 px-5 fw-semibold text-white btn-next">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex-grow-1"></div>
+
+                <!-- Start Footer Area -->
+                <footer class="footer-area bg-white text-center rounded-top-7">
+                    <p class="fs-14">© All Rights Reserved.</p>
+                </footer>
+                <!-- End Footer Area -->
+            </div>
+        </div>
+        <!-- Start Main Content Area -->
+
+
+
+        <!-- Link Of JS File -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/sidebar-menu.js"></script>
+        <script src="assets/js/dragdrop.js"></script>
+        <script src="assets/js/rangeslider.min.js"></script>
+        <script src="assets/js/quill.min.js"></script>
+        <script src="assets/js/data-table.js"></script>
+        <script src="assets/js/prism.js"></script>
+        <script src="assets/js/clipboard.min.js"></script>
+        <script src="assets/js/feather.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/apexcharts.min.js"></script>
+        <script src="assets/js/echarts.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/fullcalendar.main.js"></script>
+        <script src="assets/js/jsvectormap.min.js"></script>
+        <script src="assets/js/world-merc.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+        <script src="assets/js/lightpick.js"></script>
+        <script src="assets/js/custom/apexcharts.js"></script>
+        <script src="assets/js/custom/echarts.js"></script>
+        <script src="assets/js/datepicker.js"></script>
+        <script src="assets/js/custom/custom.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Get all the necessary elements
+                const nextButtons = document.querySelectorAll('.btn-next');
+                const backButtons = document.querySelectorAll('.btn-back');
+                const tabs = document.querySelectorAll('.nav-tabs .nav-item');
+                const tabContents = document.querySelectorAll('.tab-content .tab-pane');
+
+                // Function to update the active tab and content
+                function updateActiveTab(currentTabIndex, nextTabIndex) {
+                    // Update the active class for the tab navigation
+                    tabs[currentTabIndex].classList.remove('active');
+                    tabs[nextTabIndex].classList.add('active');
+
+                    // Update the active tab content
+                    tabContents[currentTabIndex].classList.remove('show', 'active');
+                    tabContents[nextTabIndex].classList.add('show', 'active');
+                }
+
+                // Function to handle "Next" button functionality
+                nextButtons.forEach((button, index) => {
+                    button.addEventListener('click', () => {
+                        const currentTabIndex = index; // Current tab index
+                        const nextTabIndex = currentTabIndex + 1; // Next tab index
+
+                        // Check if we're not on the last tab
+                        if (nextTabIndex < tabs.length) {
+                            // Move to the next tab and update active classes
+                            updateActiveTab(currentTabIndex, nextTabIndex);
+                        }
+                    });
+                });
+
+                // Function to handle "Back" button functionality
+                backButtons.forEach((button, index) => {
+                    button.addEventListener('click', () => {
+                        const currentTabIndex = index + 1; // Current tab index (incremented for next button index)
+                        const previousTabIndex = currentTabIndex - 1; // Previous tab index
+
+                        // Check if we're not on the first tab
+                        if (previousTabIndex >= 0) {
+                            // Move to the previous tab and update active classes
+                            updateActiveTab(currentTabIndex, previousTabIndex);
+                        }
+                    });
+                });
+
+                // Initialize the first tab to be active on page load
+                tabs[0].classList.add('active');
+                tabContents[0].classList.add('show', 'active');
+            });
+
+        </script>
+
+
+</body>
+
+</html>
